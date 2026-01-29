@@ -1,6 +1,3 @@
-
-% Document class and font size
-%-----------------------------------------------
 \documentclass[10pt, oneside]{article}
 
 % Aesthetics and colors
@@ -19,8 +16,6 @@
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \usepackage{multirow}
 \usepackage{longtable}
-
-\usepackage{fontawesome5}
 \usepackage{fontawesome}
 
 % Fonts and tweaks for XeLaTeX
@@ -54,8 +49,12 @@
 %contact info
 \newcommand{\cvemail}{david.beauchemin.5@ulaval.ca}
 \newcommand{\cvphonenumber}{(514) 250-3616}
-\newcommand{\cvlinkedin}{https://www.linkedin.com/in/david-beauchemin/?locale=en_US}
+\newcommand{\cvlinkedin}{https://www.linkedin.com/in/david-beauchemin/}
 \newcommand{\github}{https://github.com/davebulaval}
+
+\newcommand{\guillemet}[1]{\guillemotleft #1~\guillemotright}
+
+\newcommand{\link}[2]{\href{#1}{#2~{\smaller\faExternalLink*}}}
 
 % Customized subsection headers
 %-----------------------------------------------
@@ -68,9 +67,11 @@
 \newcolumntype{R}{p{0.8\textwidth}}
 \newcommand\VRule{\color{baseline-gray}\vrule width 0.5pt}
 
-\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
-\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+\usepackage{fontawesome}
 
+%---------------------------------------------------------
+% ----- Beginning of the document ---------------
+%---------------------------------------------------------
 \begin{document}
 	
 	% Name in the top center
@@ -79,314 +80,279 @@
 		
 		
 		% Colored boxes with personal info
-		%----------------------------------------------- 
+		%----------------------------------------------- 
 		
 		\par{\centering
 			\href{mailto:\cvemail}{\faEnvelopeO} \,\, \href{mailto:\cvemail}{\cvemail}\\
 			\faPhone \,\, \cvphonenumber \\
-			\href{\github}{\faGithub}\,\, \href{\github}{See GitHub} \\
-			\href{\cvlinkedin}{\faLinkedinSquare}\,\, \href{\cvlinkedin}{See profile}\\
-			Fluent in \faPython\ \faRProject\ \faGit\ \LaTeX\ \faLinux \\
-			Familiar in \faJava\ \CC \ Bash/ZSH
+			\href{\github}{\faGithub}\,\, \href{\github}{View GitHub} \\
+			\href{\cvlinkedin}{\faLinkedinSquare}\,\, \href{\cvlinkedin}{View Profile}\\
 		}
 		
 		\vspace{10pt}
 		
+		% Formal education
+		%-----------------------------------------------
 		\section*{Education}
 		
 		\begin{tabular}{L!{\VRule}R}
-			2020 -- \tab[.7cm] & \textbf{Doctor of Philosophy, Computer Science | Machine Learning | Natural Language Processing}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]} &  Laval University \\
-			& \href{https://graal.ift.ulaval.ca/}{GRAIL - Group for Research in Artificial Intelligence of Laval University}\\
+			2020 -- 2025&\textbf{PhD in Computer Science | Machine Learning | Natural Language Processing}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://graal.fsg.ulaval.ca/en}{GRAIL - Group for Research in Artificial Intellience of Laval University}\\
+			&Thesis topic: \textit{Automatic Explanation of Automobile Insurance Contracts Using Retrieval-Augmented Generation}\\
 			&\\[-6pt]
 			
-			2018 -- 2020           & \textbf{Master's degree in Computer Science | Machine Learning | Natural Language Processing}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University \\
-			& \href{https://graal.ift.ulaval.ca/}{GRAIL - Group for Research in Artificial Intelligence of Laval University}\\
-			& Thesis subject: \textit{Détection de doublons parmi des informations non structurées provenant de sources de données externes}\\
+			2018 -- 2020&\textbf{Master's Degree in Computer Science | Machine Learning | Natural Language Processing}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://graal.fsg.ulaval.ca/en}{GRAIL - Group for Research in Artificial Intellience of Laval University}\\
+			&Thesis topic: \textit{Duplicate detection among unstructured information from external data sources}\\
 			&\\[-6pt]
 			
-			2015 -- 2018           & \textbf{Bachelor's degree in actuarial sciences} \\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University
+			2015 -- 2018&\textbf{Bachelor Degree in Actuarial Science}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval \\
 		\end{tabular}
 		
 		\vspace{10pt}
 		
 		% Experience
 		%-----------------------------------------------
-		\section*{Experiences}
+		\section*{Experience}
 		
 		\subsection{Professional}
 		\begin{tabular}{L!{\VRule}R}
-			2019 -- \tab[.7cm]   &{\bf {Applied AI Researcher in Natural Language Processing}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.075]{images/Baseline.png} \tab[1.1cm]}					& Baseline\\
-			& Applied AI research for clients \& specialized formation in AI\\
+			2026 -- \tab[.7cm] &{\bf {Research Professional}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://iid.ulaval.ca/en/}{Institut intelligence et données (IID)} \\ 
 			&\\[-6pt]
-			2019 -- \tab[.7cm]   &{\bf {Developer}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.15]{images/poutyne.png} \tab[0.18cm]}& \href{https://poutyne.org/}{Poutyne}\\
-			& Feature developement \\ 
+			
+			2020 -- \tab[.7cm] &{\bf {Founding Member, AI Expert and Managing Director}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.075]{images/baseline.png} \tab[1.1cm]}& \href{https://www.baseline.quebec}{Baseline Artificial Intelligence Solidarity Cooperative}\\
 			&\\[-6pt]
-			2019 -- \tab[.7cm]   &{\bf {Founder, Researcher, and Interviewer}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.025]{images/OpenLayer.png} \tab[0.8cm]}& \href{https://www.youtube.com/channel/UCB3tYpZ1ojiqAroyDN05Cyw}{OpenLayer podcas}t\\
-			& AI content creation\\ 
+			
+			2022 -- 2025 &{\bf {Student Member of the Council}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://iid.ulaval.ca/en/}{Institut intelligence et données (IID)} \\ 
 			&\\[-6pt]
-			2018 -- \tab[.7cm]   &{\bf {Event planning}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.025]{images/meetup.png} \tab[0.8cm]}& Meetup Machine Learning Quebec\\
-			& Co-organization of events in Quebec city \\ 
+			
+			2020 -- 2022&{\bf {Project Manager for a 200-hour AI training course}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, Faculty of Science and Engineering | Continuing education \\
 			&\\[-6pt]
-			2019 -- 2020  &{\bf {AI scientist}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.09]{images/Vooban.png} \tab[1.15cm]}& Vooban\\
-			& Technical advisor in artificial intelligence
+			
+			2019 -- 2025&{\bf {Founder, Researcher, and Interviewer}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.025]{images/OpenLayer.png} \tab[0.8cm]}& \link{https://www.youtube.com/channel/UCB3tYpZ1ojiqAroyDN05Cyw}{OpenLayer podcast}\\
+			& AI content creation with over 40,000 views across 50 episodes\\ 
+			&\\[-6pt]
+			
+			2018 -- 2025&{\bf {Event Organization}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.025]{images/meetup.png} \tab[0.8cm]}& Meetup Machine Learning Québec\\
+			& Co-organization of various events in Quebec City \\ 
+			&\\[-6pt]
+			
+			2019 -- 2020&{\bf {Developer}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.15]{images/poutyne.png} \tab[0.18cm]}& \link{https://poutyne.org/}{Poutyne}\\
+			& Feature development \\ 
+			&\\[-6pt]
+			
+			2019 -- 2020&{\bf {AI Scientist}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.09]{images/Vooban.png} \tab[1.15cm]}&Vooban\\
+			& Technical advisor in artificial intelligence\\
 		\end{tabular}
-		
+	
 		\subsection{Teaching}
 		\begin{tabular}{L!{\VRule}R}
-			2016 -- \tab[.7cm] &{\bf {Teaching Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, École d'actuariat \\
-			& \textit{Introduction à l'actuariat I, Gestion du risque financier I, Analyse et traitement collectif du risque, Informatique pour actuaire, Méthodes numériques en actuariat, Mathématiques actuarielles IARD~II, Modèles linéaires en actuariat, Programmation avec R pour l'analyse de données} \\ 
+			2022 -- 2024&{\bf {Lecturer}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, Department of Computer Science and Software Engineering \\
+			& Advanced Databases (bachelor and graduate level) (2 times)\\
 			&\\[-6pt]
+			
+			2016 -- 2022&{\bf {Course Assistant / Grader}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, School of Actuarial Science and Department of Computer Science and Software Engineering\\
+			& Advanced Databases, Introduction to Actuarial Science I (2 times), Financial Risk Management I, Analysis and Collective Risk Processing, Numerical Methods in Actuarial Science (3 times), P\&C Actuarial Mathematics II (2 times), Linear Models in Actuarial Science, Programming with R for Data Analysis (5 times), Internship Report Grading (8 times)\\ 
+			&\\[-6pt]
+			
 			2019 -- 2020&{\bf {Teaching Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, BDRC - Big Data Research Center\\
-			& Winter school in machine learning
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, CRDM - Centre de recherche en données massives \\
+			& Machine Learning Winter School\\
 		\end{tabular}
 		
-		\subsection{Research}
+		\subsection{Research and Supervision}
 		\begin{tabular}{L!{\VRule}R}
-			2020 -- \tab[.7cm] &{\bf {Research Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, IID - Institute Intelligence and Data \\
-			& Female Workers Facing the Challenge of Digital Transformation: A Case Study in the Insurance Sector\\ 
-			& Christian Gagné, Future skills centre\\
+			2020 -- 2025 &{\bf {Research Assistant}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval\\
+			& Supervision of five interns for my doctoral research project \guillemet{Automatic Explanation of Automobile Insurance Contracts Using Retrieval-Augmented Generation} \\ 
+			& Richard Khoury, Beneva\\ 
+			&\\[-6pt]
+			
+			2020 -- 2022 &{\bf {Research Assistant}}\\
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://iid.ulaval.ca/en/}{Institut intelligence et données (IID)}\\
+			& Supervision of two interns for the project \guillemet{Women facing the challenges of digital transformation: a case study in the insurance sector} \\ 
+			& Christian Gagné, Future Skills Centre\\ 
+			&\\[-6pt]
+			
 			2020 &{\bf {Research Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, \textit{École d'actuariat} \\
-			& \textit{Plateforme libre de validation et d'étalonnage de prévisions financières et actuarielles}\\ 
-			& Vincent Goulet, Laval University actuarial science research chair\\ 
-			&\\[-6pt] 
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, School of Actuarial Science \\
+			& Supervision of an intern and development of the infrastructure plan for the project \guillemet{Open platform for validation and benchmarking of financial and actuarial forecasts}\\ 
+			& Vincent Goulet, Research Chair in Actuarial Science at Université Laval\\ 
+			&\\[-6pt]
+			
 			2019 &{\bf {Research Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, GRAIL - Group for Research in Artificial Intelligence of Laval University \\
-			& Information gathering using external unstructured data sources \\ 
-			& Luc Lamontagne, NSERC/Intact Financial Corporation Industrial Research Chair in Machine Learning for Insurance\\ 
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://graal.fsg.ulaval.ca/en}{GRAIL - Group for Research in Artificial Intellience of Laval University} \\
+			&Supervision of an intern and development of a solution allowing for \guillemet{Commercial risk record linkage} \\ 
+			& Luc Lamontagne, NSERC Industrial Research Chair - Intact Financial Corporation in Machine Learning for Insurance\\ 
 			&\\[-6pt]
+			
 			2019 &{\bf {Research Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, GRAIL - Group for Research in Artificial Intelligence of Laval University \\
-			& Learning taxonomy of professional skills \\ 
-			& Luc Lamontagne, ENGAGE project\\ 
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://graal.fsg.ulaval.ca/en}{GRAIL - Group for Research in Artificial Intellience of Laval University} \\
+			& Professional skills taxonomy learning \\ 
+			& Luc Lamontagne, ENGAGE Project\\ 
 			&\\[-6pt]
+			
 			2018 &{\bf {Research Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, \textit{École d'actuariat} \\
-			& Intergenerational equity: metrics for conditional indexation in pension plans \\ 
-			& Louis Adam, Laval University actuarial science research chair\\ 
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, School of Actuarial Science \\
+			& Measures related to conditional indexing in a defined benefit pension plan \\ 
+			& Louis Adam, Research Chair in Actuarial Science at Université Laval\\ 
 			&\\[-6pt]
+			
 			2018 &{\bf {Research Assistant}}\\
-			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}  &  Laval University, GRAIL - Group for Research in Artificial Intelligence of Laval University \\
-			& Weighted bootstrapping method for word relation extraction  \\ 
-			& Luc Lamontagne
+			\multirow{1}{*}{\includegraphics[scale=0.1]{images/UL_P.pdf} \tab[0.6cm]}&Université Laval, \link{https://graal.fsg.ulaval.ca/en}{GRAIL - Group for Research in Artificial Intellience of Laval University} \\
+			& Weighted bootstrapping method for word relation extraction  \\ 
+			& Luc Lamontagne\\
 		\end{tabular}
-		
+	
+		\newpage
+		\section*{Funding}
+		\begin{tabular}{L!{\VRule}R}
+			2025 & \textbf{Bourse de recherche en gouvernance} \\
+			& Université Laval (10,000\$)\\
+			&\\[-6pt]
+			
+			2022 -- 2025 & \textbf{Doctoral Research Scholarship}\\
+			& Fonds de recherche du Québec – Nature et technologies (FRQNT) (65,000\$)\\
+			&\\[-6pt]
+			
+			2020 -- 2025 & \textbf{Bourse de réussite FESP - FSG} \\
+			& Université Laval, Faculty of Science and Engineering (13,125\$)\\
+			&\\[-6pt]
+			
+			2024 & \textbf{Bourse du Fonds Vision Topping entrepreneuriat} \\
+			& Université Laval (10,000\$)\\
+			&\\[-6pt]
+			
+			2020 & \textbf{Bourse d'admission au doctorat de l'Université Laval} \\
+			& Université Laval (5,000\$)\\
+			&\\[-6pt]
+			
+			2018 & \textbf{Bourse Mathieu} \\
+			& Université Laval (2,500\$)\\
+		\end{tabular}
+				
 		\section*{Publications}
-		\subsection*{\hspace{.5cm} Article}
+		\subsection*{\hspace{.5cm} Papers}
 		\begin{tabular}{L!{\VRule}R}
-			2020 & David Beauchemin, Nicolas Garneau, Eve Gaumond, Pierre-Luc Déziel, Richard Khoury and Luc Lamontagne. \href{https://arxiv.org/abs/2011.12183}{\textit{Generating Intelligible Plumitifs Summaries: Use Case Application with Ethical Considerations}}. The 13th International Conference on Natural Language Generation. \\
-			&\\[-6pt] 
-			2020 & Marouane Yassine, David Beauchemin, François Laviolette and Luc Lamontagne. \href{https://arxiv.org/abs/2006.16152}{\textit{Leveraging Subword Embeddings for Multinational Address Parsing}}. IEEE CiSt'20, MNLP. \\
+			2026 & David Beauchemin and Richard Khoury. \textit{Benchmarking Large Language Models for Quebec Insurance: From Closed-Book to Retrieval-Augmented Generation}. ICLR \guillemet{Advances in Financial AI} Workshop (under review).\\
 			&\\[-6pt]
-			2019 &  Nicolas Garneau, Mathieu Godbout, David Beauchemin, Audrey Durand and Luc Lamontagne. \href{https://arxiv.org/abs/1912.01706}{\textit{A Robust Self-Learning Method for Fully Unsupervised Cross-Lingual Mappings of Word Embeddings: Making the Method Robustly Reproducible as Well}}. REPORLANG@LREC2020.             
+			
+			2026 & David Beauchemin, Yan Tremblay, Mohamed Amine Youssef, and Richard Khoury. \textit{Lost in Translation: Why SOTA LLMs Struggle with French NLU Frontiers}. ICLR \guillemet{I Can't Believe It's Not Better} Workshop (under review).\\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin. \link{https://corpus.ulaval.ca/entities/publication/b8e5556d-8c3e-4c20-9eb9-013341399f36}{\textit{Automatic Explanation of Automobile Insurance Contracts Using Retrieval-Augmented Generation}}. PhD Thesis, Université Laval.\\
+			&\\[-6pt]
+
+			2025 & David Beauchemin, Yan Tremblay, Mohamed Amine Youssef, and Richard Khoury. \link{https://arxiv.org/abs/2510.05026}{\textit{A Set of Quebec-French Corpus of Regional Expressions and Terms}}. arXiv:2510.05026. Reviewed at ACL Rolling Review of October 2025 (score: 3.0), will be submitted to ACL 2026.\\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin, Yan Tremblay, Mohamed Amine Youssef, and Richard Khoury. \link{https://arxiv.org/abs/2510.05046}{\textit{COLE: a Comprehensive Benchmark for French Language Understanding Evaluation}}. arXiv:2510.05046.\\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin, Pier-Luc Veilleux, Richard Khoury, and Johanna-Pascale Roy. \link{https://arxiv.org/abs/2509.25664}{\textit{QFrBLiMP: a Quebec-French Benchmark of Linguistic Minimal Pairs}}.  arXiv:2509.25664. Accepted at EACL 2026.\\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin and Richard Khoury. \link{https://doi.org/10.18653/v1/2025.emnlp-main.6}{\textit{\texttt{QFrCoLA}: a Quebec-French Corpus of Linguistic Acceptability Judgments}}. In \textit{Proceedings of the Conference on Empirical Methods in Natural Language Processing}, pages 119-130, Suzhou, China. Association for Computational Linguistics. \\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin, Michelle Albert-Rochette, Richard Khoury, and Pierre-Luc Déziel. \link{https://doi.org/10.18653/v1/2025.emnlp-main.5}{\textit{\texttt{JUDGEBERT}: Assessing Legal Meaning Preservation Between Sentences}}. In \textit{Proceedings of the Conference on Empirical Methods in Natural Language Processing}, pages 92-118, Suzhou, China. Association for Computational Linguistics.\\
+			&\\[-6pt] 
+			
+			2024 & David Beauchemin, Richard Khoury and Zachary Gagnon. \link{https://doi.org/10.18653/v1/2024.nllp-1.5}{\textit{Quebec Automobile Insurance Question-Answering With Retrieval-Augmented Generation}}. In Proceedings of the Natural Legal Language Processing Workshop at EMNLP, (pp. 48-60).\\
+			&\\[-6pt] 
+			
+			2023 & David Beauchemin, et Marouane Yassine. \link{https://aclanthology.org/2023.nlposs-1.3/}{\textit{Deepparse: An Extendable, and Fine-Tunable State-Of-The-Art Library for Parsing Multinational Street Addresses}}. Proceedings of the 3rd Workshop for Natural Language Processing Open Source Software (NLP-OSS 2023), pages 19–24, Singapore. Association for Computational Linguistics.\\
+			&\\[-6pt] 
+			
+			2023 & David Beauchemin, Horacio Saggion, et Richard Khoury. \link{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10557945/}{\textit{MeaningBERT: assessing meaning preservation between sentences}}. Frontiers in Artificial Intelligence. doi: 10.3389/frai.2023.1223924\\
 		\end{tabular}
-		
-		\subsection*{\hspace{.5cm} Other publication}
+	
 		\begin{tabular}{L!{\VRule}R}
-			2018 & David Beauchemin \textit{\href{https://corpus.ulaval.ca/jspui/handle/20.500.11794/67747}{Détection de doublons parmi des informations non structurées provenant de sources de données différentes}}, Master Thesis\\
-			2017 & David Beauchemin and Vincent Goulet \textit{\href{https://www.tug.org/TUGboat/Contents/contents38-3.html}{Typesetting actuarial symbols easily and consistently with actuarialsymbol and actuarialangle}}
+		2023 & David Beauchemin, et Richard Khoury. \link{https://caiac.pubpub.org/pub/k18zu6c9/release/1}{\textit{RISC: Generating Realistic Synthetic Bilingual Insurance Contract}}. Proceedings of the Canadian Conference on Artificial Intelligence. https://doi.org/10.21428/594757db.132dae7d \textit{(Best Student Paper Award.)}\\
+		&\\[-6pt] 
+		
+		2022 & David Beauchemin, et Marie-Claire Monty. \link{https://hal.archives-ouvertes.fr/hal-03736828v2}{\textit{Is discrimination in artificial intelligence sufficiently regulated?}}. HAL:03736828.\\
+		&\\[-6pt] 
+			
+		2022 & Vincent Primpied, David Beauchemin, et Richard Khoury. \link{https://caiac.pubpub.org/pub/iaeeogod}{\textit{Quantifying French Document Complexity}}. Proceedings of the Canadian Conference on Artificial Intelligence.\\
+		&\\[-6pt] 
+		
+		2022 & David Beauchemin, Julien Laumonier, Yvan Le Ster, et Marouane Yassine. \link{https://caiac.pubpub.org/pub/72bhunl6}{\textit{``FIJO'': a French Insurance Soft Skill Detection Dataset}}. Proceedings of the Canadian Conference on Artificial Intelligence.\\
+		&\\[-6pt] 
+		
+		2021 & Marouane Yassine, David Beauchemin, François Laviolette et Luc Lamontagne. \link{https://arxiv.org/abs/2112.04008}{\textit{Multinational Address Parsing: A Zero-Shot Evaluation}}. Accepted in the International Journal of Information Science et Technology (iJIST)\\	
+		&\\[-6pt] 
+				
+		2021 & Marouane Yassine, David Beauchemin, François Laviolette et Luc Lamontagne. \link{https://arxiv.org/abs/2006.16152}{\textit{Leveraging Subword Embeddings for Multinational Address Parsing}}. IEEE CiSt, MNLP. \\
+		&\\[-6pt] 	
+		
+		2020 & David Beauchemin, Nicolas Garneau, Eve Gaumond, Pierre-Luc Déziel, Richard Khoury et Luc Lamontagne. \link{https://arxiv.org/abs/2011.12183}{\textit{Generating Intelligible Plumitifs Summaries: Use Case Application with Ethical Considerations}}. The 13th International Conference on Natural Language Generation. \\
+		&\\[-6pt] 
+		
+		2020 & David Beauchemin. \link{https://scholar.google.com/scholar?oi=bibs\&cluster=10308625832988857283\&btnI=1\&hl=en\&authuser=1}{\textit{Duplicate detection among unstructured information from different data sources}}. Master's Thesis, Université Laval. \\
+		&\\[-6pt] 
+		
+		2019 &  Nicolas Garneau, Mathieu Godbout, David Beauchemin, Audrey Durand et Luc Lamontagne. \link{https://arxiv.org/abs/1912.01706}{\textit{A Robust Self-Learning Method for Fully Unsupervised Cross-Lingual Mappings of Word Embeddings: Making the Method Robustly Reproducible as Well}}. REPORLANG@LREC2020.\\
+	\end{tabular}
+		
+		\subsection*{\hspace{.5cm} Non-scientific}
+		
+		\begin{tabular}{L!{\VRule}R}
+			2017 & David Beauchemin et Vincent Goulet \textit{\link{https://www.tug.org/TUGboat/Contents/contents38-3.html}{Typesetting actuarial symbols easily and consistently with actuarialsymbol and actuarialangle}}
 		\end{tabular}
 		
 		\subsection*{\hspace{.5cm} Packages}
 		
 		\begin{tabular}{L!{\VRule}R}
-			2020 & Marouane Yassine et David Beauchemin \textit{\href{https://deepparse.org}{Deepparse: A state-of-the-art deep learning multinational addresses parser}}\\
-			&\\[-6pt] 
-			2019 & David Beauchemin \textit{\href{http://notificationdoc.ca/}{Notif: The notification package for every python project}}\\
-			&\\[-6pt] 
-			2017 & Simon-Pierre Gadoury and David Beauchemin \textit{\href{https://cran.r-project.org/web/packages/nCopula/index.html}{nCopula: Hierarchical Archimedean Copulas Through Multivariate Compound Distributions}} \\
-			&\\[-6pt]  
-			2017 & Vincent Goulet and David Beauchemin \textit{\href{http://ctan.org/pkg/actuarialsymbol}{actuarialsymbol - Actuarial notation with \LaTeX}}
-		\end{tabular}
-	
-	\newpage	
-		
-		\section*{Communications}
-		\subsection*{\hspace{.5cm} Workshops}
-		
-		\begin{tabular}{L!{\VRule}R}
-			2019 & \textbf{\href{http://raquebec.ulaval.ca/2019/event/les-tests-automatises-en-r}{\textit{Les tests automatisés en R}}}\\
-			& \textit{R à Québec}\\
+			2023 & David Beauchemin \textit{\link{https://github.com/GRAAL-Research/risc}{RISC: An open-source Python package for generating realistic synthetic insurance contracts}}\\
 			&\\[-6pt]
-			2019 & \textbf{\textit{Extraction d'information à partir du Web}}\\
-			& Actulab\\
+			
+			2022 & Vincent Primpied, David Beauchemin, and Richard Khoury \textit{\link{https://github.com/GRAAL-Research/tcc}{Text Complexity Computer (TCC): A library for assessing text complexity in French}}\\
 			&\\[-6pt]
-			2019 & \textbf{\textit{Atelier pratique en \faGit}}\\
-			& Meetup Machine Learning Quebec\\
-			&\\[-6pt]
-			2017 & \textbf{\href{https://vigou3.github.io/raquebec-atelier-introduction-r/}{\textit{Formation d'introduction à R}}}\\
-			& \textit{R à Québec}\\
-			&\\[-6pt]
-			2017 & \textbf{\href{https://davebulaval.github.io/R_Markdown/}{R \& Markdown}}\\
-			& \textit{École d'actuariat} \\
-			&\\[-6pt]
-		\end{tabular}
-		
-		\subsection*{\hspace{.5cm} Presentations}
-		
-		\begin{tabular}{L!{\VRule}R}
-			2020 -- 2021  & \textbf{\textit{La reproductibilité en apprentissage automatique}}\\
-			&  Webinaires de l'IID \& bootcamp de l'IID\\
-			&  Laval University, Canada \\
-			&\\[-6pt]
-			2020  & \textbf{Detection of Duplicates Among Non-structured Data From Different Data Sources}\\
-			&  Séminaires IID\\
-			&  Université Laval, Canada \\
-			&\\[-6pt]
-			2020  & \textbf{Intelligibility of digital court records: the criminal docket experience}\\
-			&  Cyberjustice laboratory\\
-			&\\[-6pt]
-			2020  & \textbf{\textit{Détection de doublons parmi des informations non structurées provenant de sources de données externes}}\\
-			&  Intact scientific workshop\\
-			&  Laval University, Canada \\
-			&\\[-6pt]
-			2019 & \textbf{\href{https://davebulaval.github.io/bonnes-pratiques-git-material/}{\textit{Bonnes pratiques \& \faGit}}}\\
-			& IFT-6010 \\
-			& Laval University, Canada\\
-			&\\[-6pt]
-			2019 & \textbf{\href{http://raquebec.ulaval.ca/2019/event/lassurance-qualite-et-le-calcul-scientifique}{\textit{Assurance Qualité, calcul scientifique \& R}}}\\
-			& R à Québec \& \href{https://www.ulaval.ca/les-etudes/chaires-de-leadership-en-enseignement-cle/les-chaires-de-leadership-en-enseignement/sciences-et-developpement-durable.html}{CLESSN}\\
-			& Laval University, Canada\\
-			&\\[-6pt]
-			2019  & \textbf{Information gathering using external unstructured data sources}\\
-			&  Intact scientific workshop\\
-			&  Laval University, Canada \\
-			&\\[-6pt]
-			2019  & \textbf{\textit{Classification de doublons de risques commerciaux}}\\
-			&  Intact scientific workshop\\
-			&  Laval University, Canada \\
-			&\\[-6pt]
-			2019 & \textbf{\textit{Introduction à Scikit-learn}}\\
-			& Summer school of the Group for Research in Artificial Intelligence of Laval University interns\\
-			& Laval University, Canada\\
-			&\\[-6pt]
-			2018  & \textit{\textbf{Système de gestion des bénévoles Agapè}}\\
-			&  GLO-7035\\
-			&  Laval University, Canada \\
-			&\\[-6pt]
-			2017  & \textbf{\href{https://github.com/davebulaval/Actulab_COOP}{\textit{Où sont les clients que nous ciblons?}}}\\
-			&  \href{http://www.actulab.ca}{Actulab}\\
-			&  Laval University, Canada
-		\end{tabular}
-		\subsection*{\hspace{.5cm} Blog Article}
-		\begin{tabular}{L!{\VRule}R}
-			2020  & \textbf{Training a Recurrent Neural Network (RNN) Using PyTorch}\\
-			&  \href{https://www.dotlayer.org/en/blog/2020-08-19-train-a-sequence-model-with-poutyne/machine-learning/}{.Layer}
-		\end{tabular}
-		
-	\newpage
-		
-		\section*{Funding and Scholarships}
-		\begin{tabular}{L!{\VRule}R}
-			2020 -- \tab[.7cm] & \textbf{Research Grant} \\
-			& \textit{Forage de données d'assurance : techniques, éthiques, et sécurité}\\
-			&\\[-6pt]
-			2020 & \textbf{Entrance Scholarship} \\
-			& Doctoral Entrance Scholarship\\
-			&\\[-6pt]	
-			2019 -- 2020 & \textbf{Research Grant} \\
-			& NSERC/Intact Financial Corporation Industrial Research Chair in Machine Learning for Insurance\\
-			& Software engineering development of Poutyne deep learning framework\\
-			&\\[-6pt]
-			2019 & \textbf{Research Grant} \\
-			& NSERC/Intact Financial Corporation Industrial Research Chair in Machine Learning for Insurance\\
-			& Information gathering using external data sources\\
-			&\\[-6pt]  
-			2018 & \textbf{Gaston Paradis Excellence Award} \\
-			& Laval University\\
-			& Social involvement\\
-			&\\[-6pt]
-			2018 & \textbf{Yves-Roy Award} \\
-			& Laval University\\
-			& Best software engineering term project      
-		\end{tabular}
-		
-		\vspace{10pt}
-		\section*{Award and Distinctions}
-		
-		\begin{tabular}{L!{\VRule}R}
-			2016 -- 2018 & \textbf{Gala for the student excellence} \\
-			& AESGUL (Association des Étudiants en Sciences et Génie de l'Université Laval)\\
-			& Social involvement      
-		\end{tabular}
-		\vspace{10pt}
-		
-		\section*{Community Involvement}
-		\subsection*{\hspace{.5cm} Committee}
-		\begin{tabular}{L!{\VRule}R}
-			2020 -- \tab[.7cm] & \textbf{R à Québec Organization Committee}\\
-			& President of organization of the workshop sessions \\
-			& Laval University, Canada\\
-			&\\[-6pt]
-			2020 -- \tab[.7cm] & \textbf{Editorial Blog Committee}\\
-			& President \\
-			& \href{https://www.dotlayer.org/}{.Layer}\\
-			&\\[-6pt]
-			2020 -- \tab[.7cm] & \textbf{Committee Data Universal Tool Development}\\
-			& President \\
-			& \href{https://www.dotlayer.org/}{.Layer}\\
-			&\\[-6pt]
-			2020 & \textbf{Co-design AI Prospective Workshop}\\
-			& Participant \\
-			& IOSIAIDT - International Observatory on the Societal Impacts of Artificial Intelligence and Digital Technology\\
-			&\\[-6pt]
-			2019 -- 2020 & \textbf{Committee for the improvement of teaching evaluations}\\
-			&Participant\\
-			& Faculty of Science and Engineering, Laval University\\
-			&\\[-6pt]
-			2018 & \textbf{Organisational committee for Machine Learning in Insurance Week}\\
-			&Participant\\
-			& Meetup Machine Learning Quebec
-		\end{tabular}
-		
-		\subsection*{\hspace{.5cm} Jury}
-		\begin{tabular}{L!{\VRule}R}
-			2018 -- 2020 & \textbf{Member of the Jury}\\
-			& My assignment in 180 seconds \\
-			& \textit{École d'actuariat}, Laval University\\
-			&\\[-6pt]
-			2019 -- 2020 & \textbf{Member of the Jury}\\
-			& Presentation of the assignment\\
-			& Department of Computer Science and Software Engineering, Laval University
-		\end{tabular}
-		
-		\subsection*{\hspace{.5cm} Cooperative}
-		\begin{tabular}{L!{\VRule}R}
-			2020 -- \tab[.7cm]  & \textbf{\href{https://baseline.quebec/}{Baseline}} \\
-			\multirow{1}{*}{\includegraphics[scale=0.075]{images/Baseline.png} \tab[1.1cm]} & Chairman of the Board of Directors of Baseline, a worker cooperative in artificial intelligence\\
-			& Quebec, Canada
-		\end{tabular}
 
-		\subsection*{\hspace{.5cm} Non-Profit Associations}
-		\begin{tabular}{L!{\VRule}R}
-			2021 -- \tab[.7cm]  & \textbf{\href{https://www.dotlayer.org/}{.Layer}} \\
-			\multirow{1}{*}{\includegraphics[scale=0.055]{images/DotLayer.png} \tab[1cm]}& President\\
-			& Quebec, Canada\\
-			&\\
-			2019 -- 2021 & \textbf{\href{https://www.dotlayer.org/}{.Layer}} \\
-			\multirow{1}{*}{\includegraphics[scale=0.055]{images/DotLayer.png} \tab[1cm]}& Vice-president of business development\\
-			& Quebec, Canada\\
-			&\\
-			&\\[-6pt]                      
-			2016 -- 2018 & \textbf{AÉACT (Association des Étudiants en Actuariat de l'Université Laval)}\\
-			& Laval University, Canada
+			2020 & Marouane Yassine et David Beauchemin \textit{\link{https://deepparse.org}{Deepparse: A state-of-the-art deep learning multinational addresses parser}}\\
+			&\\[-6pt]
+			 
+			2019 & David Beauchemin \textit{\link{http://notificationdoc.ca/}{Notif: The notification package for every Python project}}\\
+			&\\[-6pt]
+			 
+			2017 & Simon-Pierre Gadoury et David Beauchemin \textit{\link{https://cran.r-project.org/web/packages/nCopula/index.html}{nCopula: Hierarchical Archimedean Copulas Through Multivariate Compound Distributions}} \\
+			&\\[-6pt]
+			
+			2017 & Vincent Goulet et David Beauchemin \textit{\link{http://ctan.org/pkg/actuarialsymbol}{actuarialsymbol - Actuarial notation with \LaTeX}}\\
 		\end{tabular}
 	
-		
-		\subsection*{\hspace{.5cm} Podcast}
+		\subsection*{\hspace{.5cm} Corpora \& Benchmarks}	
 		\begin{tabular}{L!{\VRule}R}
-			2020 -- \tab[.7cm] & \textbf{IA \& café}\\
-			&Invited co-host of the podcast \textit{IA \& café}
+			2026 & David Beauchemin, Pier-Luc Veilleux, Richard Khoury, and Johanna-Pascale Roy. \link{https://huggingface.co/datasets/graalul/qfrblimp}{\textit{QFrBLiMP}}. A dataset of 1,761 minimal pairs annotated with 20 linguistic phenomena.\\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin, Yan Tremblay, Mohamed Amine Youssef, and Richard Khoury. \link{https://huggingface.co/datasets/graalul/COLE-public}{\textit{COLE}}. A benchmark composed of 23 diverse NLU tasks for LLM benchmarking, with a \link{https://colebenchmark.org/}{public benchmarking platform}.\\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin and Richard Khoury. \link{https://huggingface.co/datasets/graalul/qfrcola}{\textit{QFrCoLA}}. A dataset of 25,153 in-domain and 2,675 out-of-domain grammatical and ungrammatical sentences. In partnership with the \textit{Office québécois de la langue française}.\\
+			&\\[-6pt]
+			
+			2025 & David Beauchemin, Michelle Albert-Rochette, Richard Khoury, and Pierre-Luc Déziel. \link{}{\textit{FrJUDGE}}. A dataset of 297 annotated sentence pairs of legal meaning judgment assessment in French.\\
+			&\\[-6pt]
+			
+			2023 & David Beauchemin, Horacio Saggion, and Richard Khoury. \link{https://huggingface.co/datasets/graalul/csmd}{\textit{CSMD}}. A dataset of 1,355 English sentence triplets annotated with continuous meaning preservation ratings.\\
+			&\\[-6pt]
+						
+			2023 & David Beauchemin, and Richard Khoury. \link{https://huggingface.co/datasets/davebulaval/RISCBAC}{\textit{RISCBAC}}. A synthetic corpus of 10,000 English and French insurance contracts.\\
+			&\\[-6pt]
+			
+			2022 & David Beauchemin, Julien Laumonier, Yvan Le Ster, and Marouane Yassine. \link{https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/CHUEJM}{\textit{FIJO}}. A dataset of job offers annotated for soft skills detection.\\
 		\end{tabular}
 	\end{document}
